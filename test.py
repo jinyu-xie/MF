@@ -11,7 +11,7 @@ r = 10
 
 # -------------load dataset------------------
 f = open("2x400x1200x200.bin", "rb")
-gt = pickle.load(f)
+gt = pickle.load(f)[:, :, :200]
 f.close()
 f = open("2x400x1200x200_mask.bin", "rb")
 MASK = pickle.load(f)
